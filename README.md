@@ -1,4 +1,4 @@
-# selenium_passwords_generator_saver
+# selenium_passwords_generator/saver
 PASSWORD GENERATOR THAT CONNECTS TO A WEB SERVICE THROUGH SELENIUM AND IN BACKGROUND SAVES THE CODES INTO AN EXCEL FILE
 
 <b><h2>REQUIRES:</h2></b><br>
