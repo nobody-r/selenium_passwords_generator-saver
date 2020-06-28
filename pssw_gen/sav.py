@@ -16,3 +16,17 @@ nomin=browserop.find_element_by_xpath('/html/body/div[2]/section/div[1]/div[3]/d
 nocar=browserop.find_element_by_xpath('/html/body/div[2]/section/div[1]/div[3]/div[6]/div/div[2]/label').click()  #DEACTIVATE SYMBOLS
 workbook= xlsxwriter.Workbook('YOUR EXCEL PATH') #EXCEL FILE TO SAVE THE PASSWORDS
 worksheet_pass= workbook.add_worksheet('NAME OF SHEET') #CREATES A NEW EXCEL SHEET
+
+numpass= 25000 #number of passwords that will be generated and saved
+exc_row = 0
+exc_column = 0
+
+while numpass!=0:     #LOOP
+    #time.sleep(0.2)    UNCOMMENT IF YOU WANT TO MAKE IT SLOWER
+    gen = browserop.find_element_by_xpath('/html/body/div[2]/section/div[1]/div[3]/div[7]/div[1]/button').click()   #GENERATE BUTTON
+    copy = browserop.find_element_by_xpath('/html/body/div[2]/section/div[1]/div[3]/div[7]/div[2]/div/pre')         #SAVES THE PASSWORD INTO A VARIABLE
+
+    #LOOP TO MAKE THE EXCEL FILE CLEAR
+    if exc_row==999:
+        exc_column+=1
+        exc_row=0
