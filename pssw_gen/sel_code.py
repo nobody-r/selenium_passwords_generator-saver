@@ -39,3 +39,8 @@ while numpass!=0:       #LOOP
         exc_column,
         copy.text
     )
+
+    numpass= numpass-1
+    exc_row= exc_row+1
+
+workbook.close()    #SAVES THE EXCEL CHANGES
