@@ -1,7 +1,7 @@
 from selenium import webdriver  #SELENIUM LIBRARY
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver import ActionChains
-from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.firefox.options import Options
 import xlsxwriter   #LIBRARY TO WRITE IN EXCEL
 import time
 
@@ -30,3 +30,11 @@ while numpass!=0:     #LOOP
     if exc_row==999:
         exc_column+=1
         exc_row=0
+
+    print(copy.text) #PRINTS US THE GENERATED PASSWORD
+
+    worksheet_pass.write(   #WRITES THE PASSWORD INTO EXCEL
+        exc_row,
+        exc_column,
+        copy.text
+    )
